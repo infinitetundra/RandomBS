@@ -1,4 +1,4 @@
-'''Various functions useful or maybe needed to solve to determine if 
+'''Various functions useful or maybe needed to solve to determine if
     there are anagrams'''
 
 def letter_counter(word):
