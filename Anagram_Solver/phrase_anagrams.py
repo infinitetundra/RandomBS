@@ -68,7 +68,7 @@ def process_choice(name):
 def main():
     '''Help user build anagram phrase for their name'''
     #remove spaces and convert to lower case
-    name = ''.join(ini_name.lower().split())
+    name = ''.join(starting_name.lower().split())
     #remove hyphens in hyphenated names
     name = name.replace('-', '')
 
@@ -99,3 +99,6 @@ def main():
                 sys.exit()
             else:
                 main()
+
+if __name__ == '__main__':
+    main()
