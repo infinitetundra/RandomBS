@@ -24,7 +24,6 @@ word_list.append('a')
 word_list.append('I')
 word_list = sorted(word_list)
 
-starting_name = input('What the name to anagramify?\n')
 
 def find_anagrams(name, words):
     '''Read name and dictionary file and display all anagrams in name'''
@@ -47,8 +46,8 @@ def find_anagrams(name, words):
 def process_choice(name):
     '''Check user choice for validity, return choice and left-over letters'''
     while True:
-        choice = input('\nMake a choice else Enter to start over or # to end: ')
-        if choice == '':
+        choice = input('\nMake a choice else ! to start over or # to end: ')
+        if choice == '!':
             main()
         elif choice == '#':
             sys.exit()
@@ -66,6 +65,7 @@ def process_choice(name):
     return choice, name
 
 def main():
+    starting_name = input('What the name to anagramify?\n')
     '''Help user build anagram phrase for their name'''
     #remove spaces and convert to lower case
     name = ''.join(starting_name.lower().split())
